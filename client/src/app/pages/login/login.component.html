@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-3 mb-3 shadow-lg p-3">
+                <h1>Welcome Back!</h1>
+                <hr>
+                <div [ngClass] = "getClassName()" role="alert">
+                    {{message}}
+                  </div>
+                  <!-- <div class="alert alert-danger" role="alert">
+                    Account already exist!
+                  </div> -->
+                <form [formGroup]="form" class="text-left">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control">
+                    </div>
+                    <button class="btn btn-success btn-block mt-3" (click) = "login()">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
